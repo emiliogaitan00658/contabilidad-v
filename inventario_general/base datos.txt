@@ -1,0 +1,2 @@
+CREATE table inventario_producto(ind_stock_producto int PRIMARY KEY NOT null AUTO_INCREMENT,codigo_producto varchar(30),marca varchar(30),nombre_producto varchar(50), cantidad int,fecha_vencimiento date,bandera int, temp int);
+CREATE table baja_materiales(indmaterial int AUTO_INCREMENT NOT null PRIMARY KEY, codigo_producto varchar(30),cantidad int,fecha date, hora time, bandera int, temp int);
