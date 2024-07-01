@@ -9,10 +9,13 @@ if (!empty($_GET["indcliente"])) {
     $_SESSION["indcliente"] = $_GET["indcliente"];
     $_SESSION["Key"] = $Key;
     echo '<script> location.href="../crear_factura.php" </script>';
+
 } else {
     echo '<script>
  swal({
-   title: "Error ?",
+   title: "Error ?",23
+   
+   
    text: "Error verificacion de usuario",
    icon: "error",
    buttons: false,

@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="543f0c13-68d0-4188-8c23-36e0047cf076" name="Lista de cambios predeterminada" comment="">
+    <list default="true" id="543f0c13-68d0-4188-8c23-36e0047cf076" name="Lista de cambios predeterminada" comment="base de datos">
+      <change afterPath="$PROJECT_DIR$/factura_rapida.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD-Connection/conection.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD-Connection/conection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD-Connection/datos_clientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD-Connection/datos_clientes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buscar_producto_factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/buscar_producto_factura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codigo_barra.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigo_barra.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contabilida_cierre.php" beforeDir="false" afterPath="$PROJECT_DIR$/contabilida_cierre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crear_factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/crear_factura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/factura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factura_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/factura_dia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temporal/Edit_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/Edit_producto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temporal/credito_manual.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/credito_manual.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temporal/indcliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/indcliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temporal/nuevo_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/nuevo_producto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +111,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2c8i5nEpvQMcmb3HAZFrBEsz012" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -114,6 +132,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -126,6 +145,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\contabilidad\inventario_general" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -162,11 +189,43 @@
       <workItem from="1712941559709" duration="3803000" />
       <workItem from="1713194474460" duration="4394000" />
       <workItem from="1713279515228" duration="3061000" />
-      <workItem from="1713283952735" duration="3120000" />
+      <workItem from="1713283952735" duration="3267000" />
+      <workItem from="1713291827388" duration="35000" />
+      <workItem from="1713537047767" duration="1179000" />
+      <workItem from="1713541221541" duration="1760000" />
+      <workItem from="1715105278319" duration="3445000" />
+      <workItem from="1715789401570" duration="368000" />
+      <workItem from="1715869940646" duration="792000" />
+      <workItem from="1715957164309" duration="4377000" />
+      <workItem from="1716302044673" duration="83000" />
+      <workItem from="1716306369627" duration="774000" />
+      <workItem from="1716904155582" duration="5415000" />
+      <workItem from="1717003791306" duration="2938000" />
+      <workItem from="1717432064046" duration="2213000" />
+      <workItem from="1717618998557" duration="883000" />
+      <workItem from="1718375890463" duration="2334000" />
+      <workItem from="1718640799315" duration="5166000" />
+      <workItem from="1718898739412" duration="11479000" />
+      <workItem from="1719244926896" duration="248000" />
+      <workItem from="1719850541105" duration="2624000" />
+      <workItem from="1719865974115" duration="425000" />
     </task>
+    <task id="LOCAL-00001" summary="base de datos">
+      <option name="closed" value="true" />
+      <created>1713290038757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713290038764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="base de datos" />
   </component>
 </project>

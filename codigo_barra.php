@@ -9,7 +9,7 @@ if ($_GET) {
     $indproducto = datos_clientes::buscar_producto_codigo_producto_barra_codigo($indproducto1, $mysqli);
     $dato = datos_clientes::buscar_producto_codigo_producto($indproducto, $mysqli);
     if ($dato==null){
-        echo '<script> location.href="crear_factura.php" </script>';
+        echo '<script> location.href="factura_rapida.php" </script>';
     }
     $precio = $dato['precio1'];
     $producto = $dato['nombre_producto'];
@@ -19,9 +19,9 @@ if ($_GET) {
 
     if ($reques=="false") {
         datos_clientes::facturagenerada_filtro1($indtemp, $dolar, $indsucursal, $precio, $producto, $indproducto, $mysqli);
-        echo '<script> location.href="crear_factura.php" </script>';
+        echo '<script> location.href="factura_rapida.php" </script>';
     }else{
-        echo '<script> location.href="crear_factura.php" </script>';
+        echo '<script> location.href="factura_rapida.php" </script>';
     }
 
 

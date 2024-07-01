@@ -27,7 +27,7 @@ if (!empty($_POST["textnombre"])) {
                 <div class="control-pares col-md-4">
                     <input type="text" name="textnombre" class="form-control mr-sm-2 input_modificado" type="search" value="<?php if ($_POST) {
                         echo strtoupper($_POST['textnombre']);
-                    }else{ echo ""; } ?>" placeholder="Buscar cliente o Empresa ....."  aria-label="Search" required>
+                    }else{ echo ""; } ?>" autofocus placeholder="Buscar cliente o Empresa ....."  aria-label="Search" required>
                 </div>
                 <div class="control-pares col-md-2">
                     <select name="textsucursal" class="form-control" required>
@@ -187,7 +187,7 @@ if (!empty($_POST["textnombre"])) {
                     <td><a href="temporal/eliminar_cuenta_cliente.php?indcliente=<?php echo $resultado['indcliente']; ?>" class="btn btn-danger"><i class="btn-danger icon-bin"></i></a></td>
                     <td><a href="detaller_clientes.php?indcliente=<?php echo $resultado['indcliente']; ?>"
                            class="btn btn-success">Detalles</a></td>
-                    <td><a href="temporal/indcliente.php?indcliente=<?php echo $resultado['indcliente']; ?>"
+                    <td><a href="temporal/indcliente.php?indcliente=<?php echo $resultado['indcliente']; ?>,tipo=0"
                            class="btn btn-info">Crear Factura</a></td>
                 </tr>
             <?php }

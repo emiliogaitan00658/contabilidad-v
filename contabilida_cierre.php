@@ -137,7 +137,7 @@ if (!$_SESSION) {
                 $sucusa_id = $_POST["textsucursal"];
                 $fecha1 = $_POST["textfecha1"];
                 $fecha2 = $_POST["textfecha2"];
-                $result4 = $mysqli->query("SELECT * FROM `total_factura` WHERE (fecha BETWEEN '$fecha1' and '$fecha2') and indsucursal='$sucusa_id' and indtalonario is not null ");
+                $result4 = $mysqli->query("SELECT * FROM `total_factura` WHERE (fecha BETWEEN '$fecha1' and '$fecha2') and indsucursal='$sucusa_id' and indtalonario is not null ORDER BY `indtalonario` ASC ");
             }
         }
         $id_contabilida = 0;

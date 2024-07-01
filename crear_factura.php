@@ -13,7 +13,6 @@ if ($row["tipo"] == null or $row["tipo"] == "" or $row["tipo"] == " ") {
      text: "Debemos Especificar que Tipo Cliente",
      icon: "warning",
      buttons: true,
-
    })
    .then((willDelete) => {
      if (willDelete) {
@@ -28,72 +27,97 @@ if ($row["tipo"] == null or $row["tipo"] == "" or $row["tipo"] == " ") {
 if (!$_SESSION) {
     echo '<script> location.href="login.php" </script>';
 }
-
 if ($_POST) {
-    if (!empty($_POST["codigo"])) {
-        echo '<script> location.href="codigo_barra.php?codigo=' . $_POST["codigo"] . '"</script>';
-    } else {
-        $check_cordoba = isset($_POST['flexCheckCheckedcordoba']) ? 1 : 0;
-        $check_dolar = isset($_POST['flexCheckCheckeddolar']) ? 1 : 0;
-        $check_tras = isset($_POST['flexCheckCheckedtraferencia']) ? 1 : 0;
-        $check_efect = isset($_POST['flexCheckCheckedefectivo']) ? 1 : 0;
-        $check_fise = isset($_POST['flexCheckCheckedlafise']) ? 1 : 0;
-        $check_bac = isset($_POST['flexCheckCheckedbac']) ? 1 : 0;
-        $check_credito = isset($_POST['flexCheckCheckedcredito']) ? 1 : 0;
-        $check_targeta = isset($_POST['flexCheckCheckedtargeta']) ? 1 : 0;
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+
+    error_reporting(E_ALL);
+
+    $check_cordoba = isset($_POST['flexCheckCheckedcordoba']) ? 1 : 0;
+    $check_dolar = isset($_POST['flexCheckCheckeddolar']) ? 1 : 0;
+    $check_tras = isset($_POST['flexCheckCheckedtraferencia']) ? 1 : 0;
+    $check_efect = isset($_POST['flexCheckCheckedefectivo']) ? 1 : 0;
+    $check_fise = isset($_POST['flexCheckCheckedlafise']) ? 1 : 0;
+    $check_bac = isset($_POST['flexCheckCheckedbac']) ? 1 : 0;
+    $check_credito = isset($_POST['flexCheckCheckedcredito']) ? 1 : 0;
+    $check_targeta = isset($_POST['flexCheckCheckedtargeta']) ? 1 : 0;
 //    $check_rx = isset($_POST['flexCheckCheckedrx']) ? 1 : 0;
-        if ($row['tipo'] == "4") {
-            $check_rx = 1;
-        } else {
-            $check_rx = 0;
-        }
-        $co = $_POST['textcordobas'];
-        $do = $_POST['textdolar'];
-
-        $dolar = 0.0;
-        $cordobas = 0.0;
-
-        $codo = datos_clientes::sumatotal_factursa_subfactura($Key, $mysqli);
-        $RES = $codo;
-        $subtotalF = number_format($RES, 2, '.', '');
-
-        $res3 = datos_clientes::sumatotal_factursa($Key, $mysqli);
-        $sum = $res3;
-        $totalF = number_format($sum, 2, '.', '');
-        if ($check_rx == 1) {
-            datos_clientes::control_ingreso_facturar($sucursal, "RX", $Key, $mysqli);
-            $RAX = 0;
-            datos_clientes::rax_cliente_doctor($RAX, $indcliente, $Key, $sucursal, $mysqli);
-        } else {
-            datos_clientes::control_ingreso_facturar($sucursal, "PX", $Key, $mysqli);
-        }
-        $exito = datos_clientes::facturafinal($Key, $sucursal, $check_credito, $indcliente, $check_cordoba, $check_dolar, $check_tras, $check_efect, $check_fise, $check_bac, $check_targeta,
-            $cordobas, $dolar, $subtotalF, $totalF, $mysqli);
-
-        //EDITAR FACTURA SISTEMA
-        if ($_SESSION["TALONARIO"] != null) {
-            $talonario = $_SESSION["TALONARIO"];
-            datos_clientes::Factura_genera_codigo($Key, $talonario, $sucursal, $mysqli);
-            $_SESSION["TALONARIO"] = null;
-        }
-
-        if ($exito == true) {
-            $_SESSION["Key"] = "";
-            if ($check_credito == 1) {
-                echo '<script> location.href="detalles_credito.php?indcliente=' . $indcliente . '&key=' . $ress . '&total= ' . $totalF . '" </script>';
-            } else {
-                if ($check_rx == 1) {
-//                echo '<script> location.href="temporal/buscar_RAX_medico.php?key=' . $ress . '" </script>';
-                    echo '<script> location.href="factura_dia.php" </script>';
-                } else {
-                    echo '<script> location.href="factura_dia.php" </script>';
-                }
-            }
-        } else {
-            echo '<script>swal("alerta!", "Surgio un problema sistema!", "error");</script>';
-        }
-        datos_clientes::historial_acceso("Creo Factura", $sucursal, $indempleado, $mysqli);
+    if ($row['tipo'] == "4") {
+        $check_rx = 1;
+    } else {
+        $check_rx = 0;
     }
+    $co = $_POST['textcordobas'];
+    $do = $_POST['textdolar'];
+
+    $dolar = 0.0;
+    $cordobas = 0.0;
+
+    $codo = datos_clientes::sumatotal_factursa_subfactura($Key, $mysqli);
+    $RES = $codo;
+    $subtotalF = number_format($RES, 2, '.', '');
+
+    $res3 = datos_clientes::sumatotal_factursa($Key, $mysqli);
+    $sum = $res3;
+    $totalF = number_format($sum, 2, '.', '');
+    if ($check_rx == 1) {
+        datos_clientes::control_ingreso_facturar($sucursal, "RX", $Key, $mysqli);
+        $RAX = 0;
+        datos_clientes::rax_cliente_doctor($RAX, $indcliente, $Key, $sucursal, $mysqli);
+    } else {
+        datos_clientes::control_ingreso_facturar($sucursal, "PX", $Key, $mysqli);
+    }
+    $exito = datos_clientes::facturafinal($Key, $sucursal, $check_credito, $indcliente, $check_cordoba, $check_dolar, $check_tras, $check_efect, $check_fise, $check_bac, $check_targeta,
+        $cordobas, $dolar, $subtotalF, $totalF, $mysqli);
+
+    //EDITAR FACTURA SISTEMA
+    if ($_SESSION["TALONARIO"] != null) {
+        $talonario = $_SESSION["TALONARIO"];
+        datos_clientes::Factura_genera_codigo($Key, $talonario, $sucursal, $mysqli);
+        $_SESSION["TALONARIO"] = null;
+    }
+
+    if ($exito == true) {
+        $_SESSION["Key"] = "";
+        if ($check_credito == 1) {
+            echo '<script> location.href="detalles_credito.php?indcliente=' . $indcliente . '&key=' . $ress . '&total= ' . $totalF . '" </script>';
+        } else {
+            if ($check_rx == 1) {
+//                echo '<script> location.href="temporal/buscar_RAX_medico.php?key=' . $ress . '" </script>';
+                echo '<script> location.href="factura_dia.php" </script>';
+            } else {
+                echo '<script> location.href="factura_dia.php" </script>';
+//              echo '<script>
+//
+//                swal("Tipo de Factura", {
+//        buttons: {
+//                    cancel: "Credito",
+//            catch: {
+//                        text: "Contado",
+//                value: "catch",
+//            },
+//            defeat: false,
+//        },
+//    })
+//        .then((value) => {
+//                    switch (value) {
+//                        case "defeat":
+//                           // location.href="factura_dia.php";
+//                            break;
+//                        case "catch":
+//                            //location.href="detalles_credito.php?indcliente=' . $indcliente . '&key=' . $ress . '&total= ' . $totalF . ';
+//                            break;
+//                        default:
+//                            //swal("Got away safely!");
+//                    }
+//                });
+//</script>';
+            }
+        }
+    } else {
+        echo '<script>swal("alerta!", "Surgio un problema sistema!", "error");</script>';
+    }
+    datos_clientes::historial_acceso("Creo Factura", $sucursal, $indempleado, $mysqli);
 }
 
 if ($_SESSION["Key"] == "") {
@@ -108,12 +132,12 @@ if ($_SESSION["Key"] == "") {
         <section class="row">
             <div class="control-pares col-md-3">
                 <label for="" class="control-label"><u>Nombres: *</u></label>
-                <input type="text" name="textnombre" class="form-control"
+                <input type="text" name="textnombre" class="form-control z-depth-1"
                        value="<?php echo $row["nombre"] ?>" placeholder="Nombres" readonly=readonly>
             </div>
             <div class="control-pares col-md-3">
                 <label for="" class="control-label"><u>Apellidos: *</u></label>
-                <input type="text" name="textapellido" class="form-control"
+                <input type="text" name="textapellido" class="form-control z-depth-1"
                        value="<?php echo $row["apellido"] ?>" placeholder="Apellidos" readonly=readonly>
             </div>
             <div class="control-pares col-md-3">
@@ -188,19 +212,17 @@ if ($_SESSION["Key"] == "") {
         <a href="detaller_clientes.php?indcliente=<?php echo $indcliente; ?>" class="btn btn-info">Detalles Cliente</a>
         <br>
         <div class="modal-footer">
-            <div class="col-md-2">
-                <input class="form-control" type="text" name="codigo" autofocus placeholder="|||| ||| |||||">
-            </div>
-            <a class="btn white-text black btn-primary"
+            <a class="btn white-text green z-depth-2 btn-primary" href="factura_rapida.php"><i
+                        class="icon-barcode"> </i>Codigo Barra</a>
+            <a class="btn white-text black btn-primary z-depth-2"
                href="temporal/cancelar_factura.php?indtemp=<?php echo $Key; ?>"><i class="icon-bin"></i> Eliminar
                 Factura</a>
-            <a class="btn white-text blue-grey btn-primary" href="buscar_producto_factura.php"><i
+            <a class="btn white-text blue-grey btn-primary z-depth-2" href="buscar_producto_factura.php"><i
                         class="icon-search"> </i> Buscar Producto</a>
-
         </div>
     </div>
 
-    <div class="container z-depth-1 rounded white" style="margin-bottom: 0 !important;">
+    <div class="container z-depth-1 rounded white">
         <table class="table table-bordered table-dark table ">
             <thead>
             <tr>
@@ -263,17 +285,18 @@ if ($_SESSION["Key"] == "") {
     </div>
 
     <div class="container z-depth-1 rounded white">
+        <br>
         <section class="row">
             <div class="control-pares col-md-2">
-                <label for="" class="control-label"><b>Monto Apagar:</b></label>
+                <label for="" class="control-label"><b>Pago Dolar:</b></label>
                 <input type="text" name="textdolar" class="form-control"
-                       value="" placeholder="Monto ( C$ o $ )">
+                       value="" placeholder="Pago en dolar">
             </div>
-            <!--            <div class="control-pares col-md-2">-->
-            <!--                <label for="" class="control-label"><b>Pago Cordobas:</b></label>-->
-            <!--                <input type="text" name="textcordobas" class="form-control"-->
-            <!--                       value="" placeholder="Pago en cordobas">-->
-            <!--            </div>-->
+            <div class="control-pares col-md-2">
+                <label for="" class="control-label"><b>Pago Cordobas:</b></label>
+                <input type="text" name="textcordobas" class="form-control"
+                       value="" placeholder="Pago en cordobas">
+            </div>
             <div class="control-pares col-md-2">
                 <label for="" class="control-label"><b>Dolar Total: $</b></label>
                 <input type="text" name="textotaldolar" id="textotaldolar" class="form-control"
@@ -301,7 +324,7 @@ if ($_SESSION["Key"] == "") {
             </div>
             <br>
             <div class="control-pares col-md-3" style="padding-top: 2em;">
-                <input type="submit" value="Guardar" class="btn white-text btn-large btn-dark"/>
+                <input type="submit" value="Guardar Factura" class="btn white-text btn-large btn-info"/>
             </div>
         </section>
         <br>
@@ -404,4 +427,3 @@ if ($_SESSION["Key"] == "") {
 
 </script>
 <?php include "header/footer.php" ?>
-

@@ -638,6 +638,28 @@ VALUES (NULL, '$indsucursal', '$indcliente', NULL, '$monto', '$cuotas', '$fecha'
         return "No existe este usuario";
     }
 
+ public static function verificar_credito_ind($indtalonario, $mysqli)
+    {
+        $result = $mysqli->query("SELECT total FROM `total_factura` WHERE indtemp='$key'");
+        $row3 = $result->fetch_array(MYSQLI_ASSOC);
+        if (!empty($row3)) {
+            return $row3["total"];
+        }
+        return "No existe este usuario";
+    }
+
+
+    public static function verificar_numero_recibo( $numero_factura,$indsucursal,$mysqli)
+    {
+        $result = $mysqli->query("SELECT * FROM `credito` WHERE indsucursal='$indsucursal' and producto ='$numero_factura'");
+        $row3 = $result->fetch_array(MYSQLI_ASSOC);
+        if (!empty($row3)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
     public static function cierre_cordobas($fecha1, $fecha2, $indsucursal, $mysqli)
     {

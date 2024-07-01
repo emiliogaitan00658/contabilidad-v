@@ -3,6 +3,9 @@
 if (!$_SESSION) {
     echo '<script> location.href="login.php" </script>';
 }
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if ($_GET) {
     $indproducto = $_GET['codigo'];
     $precio = $_GET['precio'];
@@ -48,11 +51,11 @@ if ($_GET) {
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <section class="row">
                 <div class="control-pares col-md-4">
-                    <input type="text" name="textproducto" class="form-control input_modificado"
+                    <input type="text" name="textproducto" autofocus class="form-control input_modificado"
                            placeholder="Buscar ....." required>
                 </div>
                 <div class="control-pares col-md-4">
-                    <input type="submit" value="Buscar producto" class="btn white-text blue-grey btn-primary"/>
+                    <input type="submit" value="Buscar producto"  class="btn white-text blue-grey btn-primary"/>
                 </div>
             </section>
         </form>

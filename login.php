@@ -87,8 +87,8 @@ width: 100%;'>
             $_SESSION["RAX"] = "";
             $_SESSION["verificar"]=0;
             $_SESSION["indempleado"] = $resul_ind_empleado;
+            echo '<script>location.href="factura_dia.php";</script>';
             datos_clientes::historial_acceso("Login.php", $resul, $resul_ind_empleado, $mysqli);
-
             echo '<script>location.href="factura_dia.php";</script>';
         }
     }

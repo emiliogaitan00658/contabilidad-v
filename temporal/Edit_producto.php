@@ -12,7 +12,8 @@ if($_POST){
     $precio1=$_POST["textprecio1"];
     $precio2=$_POST["textprecio2"];
     $precio3=$_POST["textprecio3"];
-    $codigobarra=$_POST["textbarra"];
+    $nuevo_texto=$_POST["textbarra"];
+    $codigobarra = str_replace("'", "-", $nuevo_texto);
     datos_clientes::cambio_dato_producto($indproducto,$producto,$precio1,$precio2,$precio3,$codigobarra,$mysqli);
     echo '<script> swal({
   title: "Producto Actualizado?",
