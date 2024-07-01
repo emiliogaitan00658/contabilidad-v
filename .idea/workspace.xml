@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="543f0c13-68d0-4188-8c23-36e0047cf076" name="Lista de cambios predeterminada" comment="base de datos">
-      <change afterPath="$PROJECT_DIR$/factura_rapida.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="543f0c13-68d0-4188-8c23-36e0047cf076" name="Lista de cambios predeterminada" comment="2024 actulizacion julio">
       <change beforePath="$PROJECT_DIR$/BD-Connection/conection.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD-Connection/conection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD-Connection/datos_clientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD-Connection/datos_clientes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buscar_producto_factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/buscar_producto_factura.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codigo_barra.php" beforeDir="false" afterPath="$PROJECT_DIR$/codigo_barra.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contabilida_cierre.php" beforeDir="false" afterPath="$PROJECT_DIR$/contabilida_cierre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crear_factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/crear_factura.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/factura.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factura_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/factura_dia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temporal/Edit_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/Edit_producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temporal/credito_manual.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/credito_manual.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temporal/indcliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/indcliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temporal/nuevo_producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/nuevo_producto.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +193,7 @@
       <workItem from="1718898739412" duration="11479000" />
       <workItem from="1719244926896" duration="248000" />
       <workItem from="1719850541105" duration="2624000" />
-      <workItem from="1719865974115" duration="425000" />
+      <workItem from="1719865974115" duration="734000" />
     </task>
     <task id="LOCAL-00001" summary="base de datos">
       <option name="closed" value="true" />
@@ -218,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713290038764</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2024 actulizacion julio">
+      <option name="closed" value="true" />
+      <created>1719866537776</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719866537776</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +219,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="base de datos" />
+    <MESSAGE value="2024 actulizacion julio" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024 actulizacion julio" />
   </component>
 </project>
