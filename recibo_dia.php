@@ -25,7 +25,7 @@
                     </div>
                     <div class="control-pares col-md-2">
                         <input type="number" name="textrecibo" class="form-control input_modificado"
-                               placeholder="No Recibo" value="">
+                               placeholder="No Recibo" autofocus value="">
                     </div>
                     <div class="control-pares col-md-3">
                         <select name="textsucursal" class="form-control" required>

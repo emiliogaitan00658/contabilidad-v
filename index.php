@@ -128,7 +128,7 @@ if ($_POST) {
         <section class="row">
             <div class="control-pares col-md-5">
                 <label for="" class="control-label"><u>Nombres o Empresa: *</u></label>
-                <input type="text" name="textnombre" class="form-control"
+                <input type="text" name="textnombre" autofocus class="form-control"
                        value="<?php if (!empty($_POST['textnombre'])) {
                            echo $_POST['textnombre'];
                        } ?>" placeholder="Nombres" required

@@ -258,7 +258,6 @@ if ($_SESSION["Key"] == "") {
             </table>
             <br>
         </div>
-
         <div class="container z-depth-1 rounded white">
             <section class="row">
 <!--                <div class="control-pares col-md-2">-->

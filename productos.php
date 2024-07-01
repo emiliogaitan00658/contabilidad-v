@@ -12,7 +12,7 @@ if (!$_SESSION) {
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <section class="row">
                 <div class="control-pares col-md-4">
-                    <input type="text" name="textproducto" value="<?php if ($_POST)echo $producto = $_POST["textproducto"];?>" class="form-control input_modificado" placeholder="Buscar ....." required>
+                    <input type="text" name="textproducto" autofocus value="<?php if ($_POST)echo $producto = $_POST["textproducto"];?>" class="form-control input_modificado" placeholder="Buscar ....." required>
                 </div>
                 <div class="control-pares col-md-4">
                     <input type="submit" value="Buscar producto" class="btn white-text blue-grey btn-primary"/>
