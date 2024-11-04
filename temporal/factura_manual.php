@@ -28,7 +28,9 @@ if ($_POST) {
     $detalles = $_POST["textdetalles"];
     $subtotal = number_format($_POST["textsubtotal"], 2, '.', '');
     $total = number_format($_POST["texttotal"], 2, '.', '');
-
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     if ($check_rx == 1) {
         datos_clientes::control_ingreso_facturar($sucursal, "RX", $Key, $mysqli);
         $RAX = 0;
@@ -40,7 +42,7 @@ if ($_POST) {
         , $check_tras, $check_efect, $check_fise, $check_bac, $check_targeta,
         "0", $dolar, $subtotal, $total, $mysqli);
     datos_clientes::Factura_genera_codigo($Key, $nofactura, $sucursal, $mysqli);
-    datos_clientes::facturagenerada_filtro3($Key, $dolar, $sucursal, $total, $detalles, "GENERICO", $mysqli);
+    //datos_clientes::facturagenerada_filtro3($Key, $dolar, $sucursal, $total, $detalles, "GENERICO", $mysqli);
     if ($exito == true) {
         $_SESSION["Key"] = "";
         if ($check_credito == 1) {

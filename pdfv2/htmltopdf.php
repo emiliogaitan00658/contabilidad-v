@@ -27,8 +27,10 @@ if ($_SESSION["sucursal_acceso"] == $indsucursal) {
         include "imprimir_villafontana.php";
     } else if ($indsucursal == "6") {
         include "imprimir_esteli.php";
-    } else {
-        include "imprimir_factura.php";
+    } else if ($indsucursal == "9") {
+        include "imprimir_matagalpa.php";
+    } else { 
+       include "imprimir_factura.php";
     }
 } else {
     include "no_autroizado.php";

@@ -45,7 +45,7 @@ datos_clientes::update_Control_factura($talonario, $key, $mysqli);
 $ultimo_descuento="";
 
 ?>
-<div style="margin-top: 4.5em!important;margin-left: 1em">
+<div style="margin-top: 5em!important;margin-left: 1.3em">
     <p style="margin-left: 1em;width: 65%!important; font-size: 13px;" class="linea"><b><?php echo $cliente['nombre'] . " " . $cliente['apellido']; ?> </b></p>
     <span style="position: static!important; width: 20%!important; font-size: 16px;margin-left: 5em;" class="linea"><b><?php echo datos_clientes::fecha_get_pc(); ?></b></span>
 </div>
@@ -70,7 +70,7 @@ $ultimo_descuento="";
                 class="left-align"><b><?php echo $resultado['codigo_producto']; ?></b></td>
             <td style="width: 40px; height: 20px;margin-left: 6px;"
                 class="right-align"><b><?php echo $resultado['unidad']; ?></b></td>
-            <td style="width: 400px; height: 20px;margin-left: 4px;"><b><?php echo datos_clientes::nombre_producto_completo($resultado['codigo_producto'], $mysqli); ?>&nbsp;&nbsp;<i><?php echo $descuento; ?></i></b></td>
+            <td style="width: 415px; height: 20px;margin-left: 4px;"><b><?php echo datos_clientes::nombre_producto_completo($resultado['codigo_producto'], $mysqli); ?>&nbsp;&nbsp;<i><?php echo $descuento; ?></i></b></td>
             <td style="width: 68px; height: 20px;padding-left: 0em;"
                 class="right-align"><b><?php echo number_format(($resultado['precio_unidad']), 2, '.', ','); ?></b></td>
             <td style="width: 68px; height: 20px;padding-left: 1em;"

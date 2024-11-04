@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="543f0c13-68d0-4188-8c23-36e0047cf076" name="Lista de cambios predeterminada" comment="2024 actulizacion julio">
+    <list default="true" id="543f0c13-68d0-4188-8c23-36e0047cf076" name="Lista de cambios predeterminada" comment="2024 actilizacion de  julio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD-Connection/conection.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD-Connection/conection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD-Connection/datos_clientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/BD-Connection/datos_clientes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/imprimir_juigalpa.php" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/imprimir_juigalpa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crear_factura.php" beforeDir="false" afterPath="$PROJECT_DIR$/crear_factura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factura_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/factura_dia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfv2/htmltopdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdfv2/htmltopdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfv2/imprimir_altamira.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdfv2/imprimir_altamira.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfv2/imprimir_juigalpa.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdfv2/imprimir_juigalpa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temporal/factura_manual.php" beforeDir="false" afterPath="$PROJECT_DIR$/temporal/factura_manual.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ing Emilio Gaitan &lt;emiliogaitan00658@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -193,7 +207,28 @@
       <workItem from="1718898739412" duration="11479000" />
       <workItem from="1719244926896" duration="248000" />
       <workItem from="1719850541105" duration="2624000" />
-      <workItem from="1719865974115" duration="734000" />
+      <workItem from="1719865974115" duration="1357000" />
+      <workItem from="1719867960146" duration="621000" />
+      <workItem from="1720275147000" duration="5057000" />
+      <workItem from="1720467656427" duration="3877000" />
+      <workItem from="1720725751283" duration="2146000" />
+      <workItem from="1720802123114" duration="327000" />
+      <workItem from="1721618845860" duration="29000" />
+      <workItem from="1724346667653" duration="725000" />
+      <workItem from="1724440842723" duration="72000" />
+      <workItem from="1724781991375" duration="2601000" />
+      <workItem from="1725304450485" duration="847000" />
+      <workItem from="1725473168784" duration="59000" />
+      <workItem from="1726012186036" duration="38000" />
+      <workItem from="1727711014216" duration="597000" />
+      <workItem from="1727711833420" duration="11000" />
+      <workItem from="1728744721473" duration="5000" />
+      <workItem from="1728745603164" duration="871000" />
+      <workItem from="1729693316915" duration="2285000" />
+      <workItem from="1730303805061" duration="995000" />
+      <workItem from="1730475904860" duration="4073000" />
+      <workItem from="1730484522517" duration="5050000" />
+      <workItem from="1730730432444" duration="576000" />
     </task>
     <task id="LOCAL-00001" summary="base de datos">
       <option name="closed" value="true" />
@@ -211,7 +246,39 @@
       <option name="project" value="LOCAL" />
       <updated>1719866537776</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2024 base de datos julio">
+      <option name="closed" value="true" />
+      <created>1719866748735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719866748735</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2024 base de datos julio">
+      <option name="closed" value="true" />
+      <created>1719866810783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719866810783</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2024 base de datos julio">
+      <option name="closed" value="true" />
+      <created>1719866834961</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719866834961</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2024 actilizacion de  julio">
+      <option name="closed" value="true" />
+      <created>1719867327852</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719867327852</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +287,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base de datos" />
     <MESSAGE value="2024 actulizacion julio" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024 actulizacion julio" />
+    <MESSAGE value="2024 base de datos julio" />
+    <MESSAGE value="2024 actilizacion de  julio" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024 actilizacion de  julio" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/crear_factura.php</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

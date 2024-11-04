@@ -1017,7 +1017,7 @@ WHERE (indtalonario BETWEEN '$uno' and '$dos') and indsucursal='$indsucursal' GR
 
     /* Creacion dela factura todos los datos integrados */
 
-    public static function facturagenerada_filtro1($indtemp, $dolar, $indsucursal, $precio, $producto, $indproducto, $mysqli)
+    public static function facturagenerada_filtro2($indtemp, $dolar, $indsucursal, $precio, $producto, $indproducto, $mysqli)
     {
         $fecha=self::fecha_get_pc_MYSQL();
         $precio_cordobas = $dolar * $precio;
@@ -1028,6 +1028,8 @@ VALUES (NULL, NULL, '$indproducto', '$producto','1','$precio_cordobas','$precio_
         return true;
     }
 
+
+    
     public static function eliminar_producto_factura($indproducto, $key, $mysqli)
     {
         $insert = "DELETE FROM `factura` WHERE `factura`.`indtemp` = '$key' AND codigo_producto='$indproducto'";

@@ -389,7 +389,7 @@ $datos_hoy_con = datos_clientes::datos_cierre_caja($indsucursal, $mysqli);
                             }else if ($resultado['trasferencia'] == "1"){
                             echo "Transferencia";
                         }else if ($resultado['targeta'] == "1"){
-                            echo "Targeta";
+                            echo "Tarjeta";
                         }
 
                         ?>
@@ -492,6 +492,19 @@ $datos_hoy_con = datos_clientes::datos_cierre_caja($indsucursal, $mysqli);
                     </td>
                     <td>
                         <a href="detaller_clientes.php?indcliente=<?php echo $resultado['indcliente']; ?>"><?php echo $nombre_apelido; ?></a>
+                    </td>
+                    <td>
+                        <?php
+
+                        if ($resultado['efectivo'] == "1") {
+                            echo "Efectivo";
+                        }else if ($resultado['trasferencia'] == "1"){
+                            echo "Transferencia";
+                        }else if ($resultado['targeta'] == "1"){
+                            echo "Tarjeta";
+                        }
+
+                        ?>
                     </td>
                     <td class="center-align"><?php echo number_format($resultado["subtotal"], 2, '.', ','); ?></td>
                     <td class="center-align"><?php echo number_format($resultado["total"], 2, '.', ','); ?></td>
